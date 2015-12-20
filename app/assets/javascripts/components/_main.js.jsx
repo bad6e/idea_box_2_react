@@ -2,9 +2,10 @@ var Main = React.createClass({
   render() {
     return (
       <div>
-        <Header />
+        <Header title={'Bret'} />
         <Body />
       </div>
     )
   }
 });
+

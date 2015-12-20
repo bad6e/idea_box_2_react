@@ -1,9 +1,10 @@
 var Header = React.createClass({
   render() {
-    return (
+    return(
       <div>
-        <h1>Welcome to My Skill Inventory</h1>
+        <h1>Bret</h1>
       </div>
     )
   }
 });
+
