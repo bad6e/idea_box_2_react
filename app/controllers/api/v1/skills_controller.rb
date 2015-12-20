@@ -3,6 +3,10 @@ class Api::V1::SkillsController < Api::V1::BaseController
     respond_with Skill.all
   end
 
+  def show
+    respond_with Skill.find(params[:id])
+  end
+
   def create
     respond_with :api, :v1, Skill.create(skill_params)
   end
