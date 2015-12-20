@@ -2,7 +2,7 @@ var Header = React.createClass({
   render() {
     return (
       <div>
-        <h1>Hi Mom</h1>
+        <h1>Welcome to My Skill Inventory</h1>
       </div>
     )
   }
