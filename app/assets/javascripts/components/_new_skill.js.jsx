@@ -14,7 +14,6 @@ var NewSkill = React.createClass({
     });
   },
 
-
   render(){
     return (
       <div>

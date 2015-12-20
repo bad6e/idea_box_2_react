@@ -12,12 +12,30 @@ var Body = React.createClass({
     this.setState({skills: newState })
   },
 
+  handleDelete(id){
+    $.ajax({
+      url: `/api/v1/skills/${id}`,
+      type: 'DELETE',
+      success: () => {
+        this.removeIdeaFromDOM(id);
+      }
+    });
+  },
+
+  removeIdeaFromDOM(id){
+    let newSkills = this.state.skills.filter((skill) => {
+      return skill.id != id;
+    });
+
+    this.setState({ skills: newSkills });
+  },
+
   render() {
     return (
       <div>
         <h2>All Skills Below</h2>
         <NewSkill handleSubmit={this.handleSubmit} />
-        <AllSkills skills={this.state.skills}/>
+        <AllSkills skills={this.state.skills} handleDelete={this.handleDelete} />
       </div>
     )
   }
